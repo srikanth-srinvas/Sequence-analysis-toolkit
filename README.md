@@ -14,11 +14,6 @@ To use the DNA toolkit:
 
 Make sure you have Python installed on your system.
 
-### Documentation
-
-- `dna_toolkit.py`: Python script for DNA sequence validation and nucleotide frequency counting.
-- `README.md`: Overview of the repository and usage instructions.
-
 ## Credits
 
 - Python: https://www.python.org/
