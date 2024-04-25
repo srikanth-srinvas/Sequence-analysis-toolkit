@@ -9,8 +9,7 @@ The `dna_toolkit.py` file in the `scripts/` directory provides functions for DNA
 
 To use the DNA toolkit:
 1. Clone this repository to your local machine.
-2. Navigate to the `scripts/` directory.
-3. Run the `python dna_toolkit.py` command.
+2. Run the `python dna_toolkit.py` command.
 
 Make sure you have Python installed on your system.
 
