@@ -1,7 +1,7 @@
 Branch showcasing the DNA Toolkit code for validating DNA sequences and counting nucleotide frequencies. Includes functions for validating DNA sequences and counting the frequency of nucleotides (A, C, G, T) in a DNA sequence."
 
 
-## Today's Code: DNA Toolkit
+## DNA Toolkit
 
 The `dna_toolkit.py` file in the `scripts/` directory provides functions for DNA sequence validation and nucleotide frequency counting.
 
