@@ -25,3 +25,6 @@ def transcription(seq):
 def reverse_complement(seq):
     # swaps adenine for thymine and Guanine for Cytosine and vice-versa 
     return ''.join([DNA_ReverseComplement[nuc] for nuc in seq])[::-1]
+# Pythonic approach 
+# mapping = str.maketrans('ATCG', 'TAGC')
+# return seq.translate(mapping)[::-1]
