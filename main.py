@@ -1,5 +1,4 @@
-# DNA Toolset/Code testing file
-from DNAToolkit import *
+from dna_toolkit import *
 import random
 
 # Creating a random DNA sequence for testing:
@@ -8,3 +7,4 @@ randDNAStr = ''.join([random.choice(Nucleotides)
 
 DNAStr = validateSeq(randDNAStr)
 print(countNucFrequency(DNAStr))
+print(transcription(DNAStr))
