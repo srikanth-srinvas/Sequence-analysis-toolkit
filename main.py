@@ -19,3 +19,8 @@ print(colored(reverse_complement(DNAStr)))
 print(f"[4] + DNA String + Reverse Complement:\n5' {(DNAStr)} 3'")
 print(f"   {''.join(['|' for c in range(len(DNAStr))])}")
 print(f"3' {(colored(reverse_complement(DNAStr)))} 5'\n")
+
+# calculate GC content % for a string and sub sequences with a window si
+print(f'[5] + GC Content: {gc_content(DNAStr)}%\n')
+print(
+    f'[6] + GC Content in Subsection k=5: {gc_content_subsec(DNAStr, k=5)}\n')
