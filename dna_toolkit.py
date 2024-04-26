@@ -1,7 +1,5 @@
 import collections
-
-Nucleotides = ["A", "C", "G", "T"]
-
+from structures import *
 
 # Check the sequence to make sure it is a DNA String
 def validateSeq(dna_seq):
@@ -22,3 +20,8 @@ def countNucFrequency(seq):
 def transcription(seq):
     # DNA to RNA transcription 
     return seq.replace("T", "U")
+
+
+def reverse_complement(seq):
+    # swaps adenine for thymine and Guanine for Cytosine and vice-versa 
+    return ''.join([DNA_ReverseComplement[nuc] for nuc in seq])[::-1]
