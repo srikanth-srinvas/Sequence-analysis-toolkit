@@ -71,3 +71,22 @@ def gen_reading_frames(seq):
     frames.append(translate_seq(reverse_complement(seq),1))
     frames.append(translate_seq(reverse_complement(seq),2))
     return frames 
+
+def proteins_from_orfs(aa_seq):
+    """Read all possible proteins in an aminoacid string and return a list of possible amino acids which make a protein"""
+    current_prot = []
+    proteins = []
+    for aa in aa_seq:
+        if aa == "_":
+            # STOP accumulating amino acids if _ - STOP codon is found
+            if current_prot:
+                for p in current_prot:
+                    proteins.append(p)
+                current_prot = []
+        else:
+            # START accumulating amino acids if M start codon is found
+            if aa == "M":
+                current_prot.append("")
+            for i in range(len(current_prot)):
+                current_prot[i] += aa
+    return proteins

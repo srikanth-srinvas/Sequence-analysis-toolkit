@@ -35,3 +35,9 @@ print(
 print('[9] + Reading_frames:')
 for frame in gen_reading_frames(DNAStr):
     print(frame)
+
+
+test_rf_frame = ['L', 'M', 'T', 'A', 'L', 'V', 'V',
+                 'L', 'L', 'R', 'R', 'G', 'S', '_', 'G', 'H']
+
+print(proteins_from_orfs(test_rf_frame))
