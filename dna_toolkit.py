@@ -18,23 +18,23 @@ def countNucFrequency(seq):
     # return dict(collections.Counter(seq))
 
 def transcription(seq):
-    # DNA to RNA transcription 
+    # DNA to RNA transcription
     return seq.replace("T", "U")
 
 
 def reverse_complement(seq):
-    # swaps adenine for thymine and Guanine for Cytosine and vice-versa 
+    # swaps adenine for thymine and Guanine for Cytosine and vice-versa
     return ''.join([DNA_ReverseComplement[nuc] for nuc in seq])[::-1]
-# Pythonic approach 
+# Pythonic approach
 # mapping = str.maketrans('ATCG', 'TAGC')
 # return seq.translate(mapping)[::-1]
 
 def gc_content(seq):
-    # calculates the GC content % in the given sequence 
+    # calculates the GC content % in the given sequence
     return round((seq.count('C') + seq.count('G')) / len(seq) * 100)
 
 
-# To calculate the GC content for a specific window of k 
+# To calculate the GC content for a specific window of k
 def gc_content_subsec(seq, k=20):
     """GC Content in a DNA/RNA sub-sequence length k. k=20 by default"""
     res = []
