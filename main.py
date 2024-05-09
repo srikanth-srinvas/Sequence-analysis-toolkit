@@ -36,8 +36,6 @@ print('[9] + Reading_frames:')
 for frame in gen_reading_frames(DNAStr):
     print(frame)
 
-
-test_rf_frame = ['L', 'M', 'T', 'A', 'L', 'V', 'V',
-                 'L', 'L', 'R', 'R', 'G', 'S', '_', 'G', 'H']
-
-print(proteins_from_orfs(test_rf_frame))
+print('\n[10] + All prots in 6 open reading frames:')
+for prot in all_proteins_from_orfs(DNAStr, 0, 0, True):
+    print(f'{prot}')

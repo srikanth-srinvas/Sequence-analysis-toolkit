@@ -72,7 +72,7 @@ def gen_reading_frames(seq):
     frames.append(translate_seq(reverse_complement(seq),2))
     return frames 
 
-def proteins_from_orfs(aa_seq):
+def proteins_from_rfs(aa_seq):
     """Read all possible proteins in an aminoacid string and return a list of possible amino acids which make a protein"""
     current_prot = []
     proteins = []
@@ -90,3 +90,30 @@ def proteins_from_orfs(aa_seq):
             for i in range(len(current_prot)):
                 current_prot[i] += aa
     return proteins
+
+# generate all reading frames
+# extract all proteins from RFs
+# return a list
+
+def proteins_from_rf(rf):
+    """Extract proteins from a given reading frame."""
+    # Placeholder for actual implementation
+    return []  # Modify this to return actual proteins
+
+def all_proteins_from_orfs(seq, startReadPos=0, endReadPos=0, ordered=False):
+    """Compute all possible proteins for all open reading frames."""
+    """Protein Search DB: https://www.ncbi.nlm.nih.gov"""
+    """API can be used to pull protein info"""
+    if endReadPos > startReadPos:
+        rfs = gen_reading_frames(seq[startReadPos: endReadPos])
+    else:
+        rfs = gen_reading_frames(seq)
+
+    res = []
+    for rf in rfs:
+        prots = proteins_from_rf(rf)
+        res.extend(prots)  # Use extend to append multiple proteins
+
+    if ordered:
+        return sorted(res, key=len, reverse=True)
+    return res
