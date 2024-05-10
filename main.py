@@ -1,3 +1,6 @@
+from bio_seq import bio_seq
+from utilities import read_FASTA, readTextFile, writeTextFile
+
 # Create an instance of bio_seq
 test_dna = bio_seq(seq="TCATTAGACATACGACTGTGAGGAGGCACCACCTGGATGC", seq_type="DNA", label="Test Sequence")
 
