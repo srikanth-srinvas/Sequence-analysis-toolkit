@@ -16,4 +16,4 @@ Make sure you have Python installed on your system.
 ## Credits
 
 - Python: https://www.python.org/
-- Rosalind: http://rosalind.info/
+
